@@ -1,0 +1,23 @@
+<app-header></app-header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 pb-5">
+      <mat-card class="app-card" *ngFor="let satis of (satiss$ | async) | reverse">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title [routerLink]="['/satis-detail']">{{ satis.title }}</mat-card-title>
+          <mat-card-subtitle>~</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            {{ satis.description }}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+</div>
+
+<app-footer></app-footer>
